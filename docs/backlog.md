@@ -1,49 +1,57 @@
 # Backlog do MVP
 
-## Release 1 — Core
+## v0.1 — Estrutura inicial
 
-- [ ] **RF01 — Health check**
+- [x] **RT00 — Preparação do projeto**
   - Critérios de aceite:
-    - [ ] `GET /health` retorna `200 OK`.
-    - [ ] A resposta contém `status: "ok"`.
-    - [ ] A resposta contém `timestamp` em UTC e formato ISO 8601.
+    - [x] Repositório Git inicializado.
+    - [x] Camadas `api`, `services`, `repositories` e `models` criadas.
+    - [x] Modelos Pydantic iniciais e `.gitignore` configurados.
 
-- [ ] **RF02 — Criar tarefa**
+## v0.2 — API básica
+
+- [x] **RF01 — Health check**
   - Critérios de aceite:
-    - [ ] `POST /tasks` cria uma tarefa com UUID.
-    - [ ] `title` é obrigatório e aceita entre 3 e 100 caracteres.
-    - [ ] `description` é opcional.
-    - [ ] `status` assume `false` quando não informado.
-    - [ ] `created_at` é gerado em UTC.
+    - [x] `GET /health` retorna `200 OK`.
+    - [x] A resposta contém `status: "ok"`.
+    - [x] A resposta contém `timestamp` em UTC e formato ISO 8601.
 
-- [ ] **RF03 — Listar tarefas**
+- [x] **RF02 — Criar tarefa**
   - Critérios de aceite:
-    - [ ] `GET /tasks` retorna `200 OK`.
-    - [ ] A resposta retorna uma lista de tarefas.
+    - [x] `POST /tasks` cria uma tarefa com UUID.
+    - [x] `title` é obrigatório e aceita entre 3 e 100 caracteres.
+    - [x] `description` é opcional.
+    - [x] `status` assume `false` quando não informado.
+    - [x] `created_at` é gerado em UTC.
 
-- [ ] **RF04 — Consultar tarefa por ID**
+- [x] **RF03 — Listar tarefas**
   - Critérios de aceite:
-    - [ ] `GET /tasks/{task_id}` retorna a tarefa existente.
-    - [ ] Retorna `404 Not Found` para UUID inexistente.
+    - [x] `GET /tasks` retorna `200 OK`.
+    - [x] A resposta retorna uma lista de tarefas.
 
-- [ ] **RF05 — Atualizar tarefa**
+- [x] **RF04 — Consultar tarefa por ID**
   - Critérios de aceite:
-    - [ ] `PUT /tasks/{task_id}` atualiza título, descrição e status.
-    - [ ] Retorna a tarefa atualizada.
-    - [ ] Retorna `404 Not Found` para UUID inexistente.
+    - [x] `GET /tasks/{task_id}` retorna a tarefa existente.
+    - [x] Retorna `404 Not Found` para UUID inexistente.
 
-- [ ] **RF06 — Remover tarefa**
+- [x] **RF05 — Atualizar tarefa**
   - Critérios de aceite:
-    - [ ] `DELETE /tasks/{task_id}` remove uma tarefa existente.
-    - [ ] Retorna `204 No Content`.
-    - [ ] Retorna `404 Not Found` para UUID inexistente.
+    - [x] `PUT /tasks/{task_id}` atualiza título, descrição e status.
+    - [x] Retorna a tarefa atualizada.
+    - [x] Retorna `404 Not Found` para UUID inexistente.
 
-- [ ] **RT01 — Repositório em memória**
+- [x] **RF06 — Remover tarefa**
   - Critérios de aceite:
-    - [ ] Operações de persistência ficam isoladas na camada `repositories`.
-    - [ ] A camada de API não acessa a estrutura de dados diretamente.
+    - [x] `DELETE /tasks/{task_id}` remove uma tarefa existente.
+    - [x] Retorna `204 No Content`.
+    - [x] Retorna `404 Not Found` para UUID inexistente.
 
-## Release 2 — Qualidade
+- [x] **RT01 — Repositório em memória**
+  - Critérios de aceite:
+    - [x] Operações de persistência ficam isoladas na camada `repositories`.
+    - [x] A camada de API não acessa a estrutura de dados diretamente.
+
+## v0.3 — Persistência e qualidade
 
 - [ ] **RT02 — Validação e tratamento de erros**
   - Critérios de aceite:
@@ -70,7 +78,7 @@
     - [ ] A aplicação registra eventos de inicialização.
     - [ ] Erros inesperados são registrados em log.
 
-## Release 3 — Entrega final
+## v1.0 — MVP publicado
 
 - [ ] **RT06 — Documentação da API**
   - Critérios de aceite:
