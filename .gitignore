@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Cache e relatórios de testes
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Configurações locais de editor
+.vscode/
+.idea/
+*.code-workspace
