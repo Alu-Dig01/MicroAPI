@@ -1,0 +1,10 @@
+# Normaliza arquivos de texto no repositório.
+* text=auto
+
+# Mantém arquivos de código e documentação com LF.
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
